@@ -19,52 +19,28 @@
 </div>
 
 <!-- Categories Start -->
-
 <div class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3 py-4">
 
-    <a href="#" class="col text-center category_link">
-        <div class="category_image shadow">
-            <img src="images/appetizers.png" alt="" loading="lazy">
-        </div>
-        <div class="pt-1 subtitle">Appetizers</div>
-    </a>
 
-    <a href="#" class="col text-center category_link">
-        <div class="category_image shadow">
-            <img src="images/seafood.png" alt="" loading="lazy">
-        </div>
-        <div class="pt-1 subtitle">Seafood</div>
-    </a>
-
-    <a href="#" class="col text-center category_link">
-        <div class="category_image shadow">
-            <img src="images/holidays.png" alt="" loading="lazy">
-        </div>
-        <div class="pt-1 subtitle">Holidays</div>
-    </a>
-
-    <a href="#" class="col text-center category_link">
-        <div class="category_image shadow">
-            <img src="images/desserts.png" alt="" loading="lazy">
-        </div>
-        <div class="pt-1 subtitle">Desserts</div>
-    </a>
-
-    <a href="#" class="col text-center category_link">
-        <div class="category_image shadow">
-            <img src="images/soups-stews.png" alt="" loading="lazy">
-        </div>
-        <div class="pt-1 subtitle">Soups/Stews</div>
-    </a>
-
+    <% if(categories != '') { %>
+      <% categories.forEach(function(category, index) { %>
+        <a href="/categories/<%- category.name %>" class="col text-center category_link">
+          <div class="category_image shadow">
+            <img src="images/<%- category.image %>" alt="<%- category.name %>" loading="lazy">
+          </div>
+          <div class="pt-1"><%- category.name %></div>
+        </a>
+      <% }) %>
+    <% } %>
+  
     <a href="/categories" class="col text-center category_link">
-        <div class="category_image shadow">
-            <img src="images/view-all.png" alt="View All Categories" loading="lazy">
-        </div>
-        <div class="pt-1 subtitle">View All</div>
+      <div class="category_image shadow">
+        <img src="images/view-all.png" alt="View All Categories" loading="lazy">
+      </div>
+      <div class="pt-1">View All</div>
     </a>
-
-</div>
+  
+  </div>
 <!-- Categories End -->
 
 <!-- What's New start -->
