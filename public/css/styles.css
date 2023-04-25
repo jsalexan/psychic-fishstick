@@ -48,3 +48,10 @@ nav-link:active {
 .category_image--lg {
     height: 270px;
 }
+
+
+footer {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 12px;
+}
