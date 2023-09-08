@@ -17,6 +17,10 @@ const recipeSchema = new mongoose.Schema({
     type: Array,
     required: 'This field is required.'
   },
+  steps: {
+    type: Array,
+    required: 'This field is required.'
+  },
   category: {
     type: String,
     enum: ['Appetizers', 'Kid Favorites', 'Salads', 'Seafood', 'Holidays', 'Soups/Stews', 'Casseroles', 'Desserts'],
